@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Nav(){
-  //  const cartcount = document.getElementById("cartcount");
-  //  const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  // cartcount.textContent = cart.length;
+   const cartcount = document.getElementById("cartcount");
+   const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cartcount.textContent = cart.length;
 
   //  const wishcount = document.getElementById("wishcount");
   //  const wishitem = JSON.parse(localStorage.getItem('wishitem')) || [];

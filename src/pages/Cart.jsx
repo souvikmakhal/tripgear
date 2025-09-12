@@ -43,7 +43,7 @@ function Cart(){
                           <li class="breadcrumb-item"><Link to="/">Home</Link></li>
                               <li class="breadcrumb-item active" aria-current="page">Library</li>
                         </ol>
-                              </nav>
+                              </nav> 
                </div>
             </div>
         </div>
