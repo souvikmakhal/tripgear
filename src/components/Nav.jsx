@@ -2,17 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Nav(){
-   const cartcount = document.getElementById("cartcount");
+   
    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  cartcount.textContent = cart.length;
+  const wishitem = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-  //  const wishcount = document.getElementById("wishcount");
-  //  const wishitem = JSON.parse(localStorage.getItem('wishitem')) || [];
-  //  wishcount.textContent = wishitem.length;
-
-  //  const wishcount = document.getElementById("wishcount");
-   
-   
     return(
         <div className="container">
        <nav className="navbar navbar-expand-lg navbar-light">
@@ -45,10 +38,10 @@ function Nav(){
         <Link className="nav-link" to="/"><i class="fa fa-user"></i></Link> 
       </li>
        <li className="nav-item">
-        <Link className="nav-link" to="wishlist"><i class="fal fa-heart"></i><span id="wishcount">0</span></Link>
+        <Link className="nav-link" to="wishlist"><i class="fal fa-heart"></i><span>{wishitem.length}</span></Link>
       </li>
          <li className="nav-item">
-        <Link className="nav-link" to="/"><i class="fal fa-shopping-bag"></i><span id="cartcount">0</span></Link>
+        <Link className="nav-link" to="/"><i class="fal fa-shopping-bag"></i><span>{cart.length}</span></Link>
       </li>
     </ul>
   </div>
