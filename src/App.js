@@ -10,6 +10,7 @@ import Checkout from './pages/Checkout';
 import Faqpage from './pages/Faqpage';
 import Blog from './pages/Blog';
 import Wishlist from './pages/wishlist';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
   <Route path="/Faqpage" element={<Faqpage/>}/>
   <Route path="/Blog" element={<Blog/>}/>
   <Route path="/wishlist" element={<Wishlist/>}/>
+  <Route path="/ContactUs" element={<ContactUs/>}/>
   </Routes>
   <Footer/>
   </Router>

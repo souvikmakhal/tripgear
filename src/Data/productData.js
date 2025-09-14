@@ -56,30 +56,30 @@ const productData = [
   },
   {
     "id": 6,
-    "name": "Thermal Sleeping Bag",
-    "descriptions": "All-season sleeping bag with thermal insulation to keep you warm even in extreme conditions. Lightweight and easy to carry.",
+    "name": "Litech Coffee Kettle",
+    "descriptions": "A sleek and efficient coffee kettle designed for precision brewing. Lightweight and easy to handle, it heats quickly and ensures optimal temperature control for the perfect cup every time. Ideal for home or travel use.",
     "price": 130.00,
     "oldPrice": 110.00,
     "reviews": 150,
     "rating": 4.6,
     "image": "/images/pp6.png",
-    "category": "Sleeping Bag"
+    "category": "Accessories"
   },
   {
     "id": 7,
-    "name": "Trekking Poles",
-    "descriptions": "Adjustable and shock-absorbing trekking poles that reduce impact on knees and improve stability on steep terrains.",
+    "name": "Camping Sleeping Bag",
+    "descriptions": "Stay warm and cozy on your outdoor trips with this lightweight, weather-resistant sleeping bag. Designed for easy packing and maximum comfort, it’s perfect for camping, hiking, and overnight adventures.",
     "price": 75.00,
     "oldPrice": 60.00,
     "reviews": 87,
     "rating": 4.4,
     "image": "/images/pp7.png",
-    "category": "Accessories"
+    "category": "SleepingBag"
   },
   {
     "id": 8,
-    "name": "Hydration Pack",
-    "descriptions": "Compact hydration pack with a 2-liter water reservoir, ergonomic fit, and breathable straps for comfortable long hikes.",
+    "name": "Cookware Mess Kit Set",
+    "descriptions": "A compact and lightweight cookware set ideal for camping and outdoor cooking. Includes essential pots, pans, and utensils made from durable, easy-to-clean materials—perfect for preparing meals on the go.",
     "price": 65.00,
     "oldPrice": 50.00,
     "reviews": 132,
@@ -89,36 +89,47 @@ const productData = [
   },
   {
     "id": 9,
-    "name": "Sleeping Mat",
-    "descriptions": "Lightweight and foldable sleeping mat with high-density foam for extra comfort. Provides insulation from the cold ground and is easy to pack for camping trips.",
+    "name": "Hydration Hiking Backpack",
+    "descriptions": "A lightweight and ergonomic backpack with an integrated hydration system. Designed for easy access to water on the go, it’s perfect for hiking, biking, and outdoor adventures, keeping you refreshed and hands-free.",
     "price": 55.00,
     "oldPrice": 45.00,
     "reviews": 76,
     "rating": 4.3,
     "image": "/images/pp9.png",
-    "category": "Sleeping Mat"
+    "category": "Backpack"
   },
   {
     "id": 10,
-    "name": "Camp Kitchen Set",
-    "descriptions": "Portable camp kitchen set including a compact stove, cookware, and utensils. Designed for easy packing and efficient outdoor cooking.",
+    "name": "Skydome Camping Tent",
+    "descriptions": "A spacious and weather-resistant camping tent built for comfort and durability. Easy to set up, it offers excellent ventilation and protection, making it ideal for outdoor trips and weekend getaways.",
     "price": 95.00,
     "oldPrice": 80.00,
     "reviews": 64,
     "rating": 4.5,
     "image": "/images/pp10.png",
-    "category": "Camp Kitchen"
+    "category": "Tent"
   },
   {
     "id": 11,
-    "name": "Baselayer Set",
-    "descriptions": "Moisture-wicking and breathable baselayer set that keeps you warm in cold weather and comfortable during intense hikes. Lightweight and quick-drying fabric.",
+    "name": "Men Volga Trekking Shoes",
+    "descriptions": "Durable and lightweight trekking shoes designed for outdoor adventures. With superior grip, cushioning, and breathable materials, they ensure comfort and stability on rugged trails. Perfect for long hikes and everyday outdoor use.",
     "price": 70.00,
     "oldPrice": 59.00,
     "reviews": 91,
     "rating": 4.6,
     "image": "/images/pp11.png",
-    "category": "Baselayers"
+    "category": "Shoes"
+  },
+   {
+    "id": 12,
+    "name": "0 Degree Sleeping Bag",
+    "descriptions": "Stay warm and comfortable in extreme conditions with this 0° sleeping bag. Designed for cold-weather camping, it offers excellent insulation, lightweight portability, and moisture-resistant materials for a cozy night under the stars.",
+    "price": 105.00,
+    "oldPrice": 120.00,
+    "reviews": 67,
+    "rating": 4.5,
+    "image": "/images/pp12.png",
+    "category": "SleepingBag"
   }
 ];
 

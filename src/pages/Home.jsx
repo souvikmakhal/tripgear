@@ -5,10 +5,9 @@ import Testimonial from '../components/Testimonial';
 import productData from '../Data/productData';
 
 function Home(){
-    
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
     
     function wishbutton (product)  {
-          let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
           const exestingItem = wishlist.find((Item) => Item.id === product.id);
           if (exestingItem){
                    exestingItem.quantity +=1;
@@ -17,6 +16,7 @@ function Home(){
             wishlist.push({...product,quantity:1});
           }
           localStorage.setItem("wishlist", JSON.stringify(wishlist));
+          window.dispatchEvent(new Event("wishUpdated"));
         } 
         
     return(
@@ -62,8 +62,8 @@ function Home(){
                     <div className='item-category-img'>
                     <img src='./images/cat-1.png' alt="logo"/>
                     </div>
-                    <h4>Backpacks</h4>
-                    <p>36 Products</p>
+                    <h4>Jacket</h4>
+                    <p>02 Products</p>
                 </div>
             </div>
             <div className='col-md-2'>
@@ -71,7 +71,7 @@ function Home(){
                     <div className='item-category-img'>
                     <img src='./images/cat-2.png' alt="logo"/>
                     </div>
-                    <h4>Baselayers</h4>
+                    <h4>Hiking Shoes</h4>
                     <p>50 Products</p>
                 </div>
             </div>
@@ -89,7 +89,7 @@ function Home(){
                     <div className='item-category-img'>
                     <img src='./images/cat-4.png' alt="logo"/>
                     </div>
-                    <h4>Camp Kitchen</h4>
+                    <h4>Backpack</h4>
                     <p>56 Products</p>
                 </div>
             </div>
@@ -98,7 +98,7 @@ function Home(){
                     <div className='item-category-img'>
                     <img src='./images/cat-5.png' alt="logo"/>
                     </div>
-                    <h4>Climbing</h4>
+                    <h4>Camp Kitchen</h4>
                     <p>25 Products</p>
                 </div>
             </div>
@@ -107,7 +107,7 @@ function Home(){
                     <div className='item-category-img'>
                     <img src='./images/cat-6.png' alt="logo"/>
                     </div>
-                    <h4>Sleeping Mats</h4>
+                    <h4>Sleeping Bags</h4>
                     <p>10 Products</p>
                 </div>
             </div>
@@ -142,7 +142,7 @@ function Home(){
           <Link className="btn-product" to={`/Productdetails/${item.id}`}>Order Now <i class="fa fa-shopping-bag" aria-hidden="true"></i></Link>
           </div>
           <div className='popup-icon'>
-            <Link className="item-icon" to="/"><i class="fal fa-heart"></i></Link>
+            <Link className="item-icon" onClick={() => wishbutton(item)} >{wishlist.find(p => p.id === item.id) ? <i class="fal fa-heart"></i> : <i class="fal fa-heart" style={{fontWeight: "800", color: "#00BFB2"}}></i>}</Link>
             <Link className="item-icon" to="/"><i class="fal fa-eye"></i></Link>
           </div>
         </div>

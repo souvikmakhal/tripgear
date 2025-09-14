@@ -10,13 +10,13 @@ function Faqpage(){
                     <div className="row justify-content-center">
                        <div className="col-md-8">
                         <div className="inner-heading">
-                            <h4>Our Products</h4>
+                            <h4>Frequently Asked Questions</h4>
                             <p>Adventure Starts with the Right Gear</p>
                         </div>
                             <nav aria-label="breadcrumb">
                                <ol class="breadcrumb">
                                   <li class="breadcrumb-item"><Link to="/">Home</Link></li>
-                                      <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                      <li class="breadcrumb-item active" aria-current="page">FAQ</li>
                                 </ol>
                                       </nav>
                        </div>

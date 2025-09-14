@@ -18,11 +18,12 @@ function Cart(){
     setTotal(totalPrice);
   }, [cart]);
 
-  // const handleRemove = (id) => {
-  //   const updatedCart = cart.filter((_,i) => i !== id);
-  //   setCart(updatedCart);
-  //   localStorage.setItem("cart", JSON.stringify(updatedCart));
-  // };
+  const handleRemove = (id) => {
+    const updatedCart = cart.filter((_,i) => i !== id);
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    window.dispatchEvent(new Event("cartUpdated"));
+  };
 
   // const clearCart = () => {
   //   setCart([]);
@@ -35,13 +36,13 @@ function Cart(){
             <div className="row justify-content-center">
                <div className="col-md-8">
                 <div className="inner-heading">
-                    <h4>Our Products</h4>
+                    <h4>Review Your Order</h4>
                     <p>Adventure Starts with the Right Gear</p>
                 </div>
                     <nav aria-label="breadcrumb">
                        <ol class="breadcrumb">
                           <li class="breadcrumb-item"><Link to="/">Home</Link></li>
-                              <li class="breadcrumb-item active" aria-current="page">Library</li>
+                              <li class="breadcrumb-item active" aria-current="page">Cart</li>
                         </ol>
                               </nav> 
                </div>
@@ -63,7 +64,7 @@ function Cart(){
       <div className="total">Total</div>
       <div className="remove"></div>
     </div>
-            {cart.map((product) =>(
+            {cart.map((product,i) =>(
              <div className="cart-item">
       <div className="product-info">
         <img src={product.image} alt={product.name}/>
@@ -78,10 +79,13 @@ function Cart(){
         </div>
       </div>
       <div className="total">${product.price}</div>
-      <div className="remove"><i class="fa fa-trash" aria-hidden="true"></i></div>
+      <div className="remove" onClick ={() =>handleRemove(i)}><i class="fa fa-trash" aria-hidden="true"></i></div>
       {/* <button onClick={clearCart}>test</button> */}
     </div>
             ))}
+           </div>
+           <div className="justify-content-end d-flex mt-4">
+            <Link className="btn-product" to="/shop">Continue Shopping<i class="fa fa-shopping-bag" aria-hidden="true"></i></Link>
            </div>
           </div>
           <div className="col-md-3">
@@ -103,7 +107,7 @@ function Cart(){
               <span>${total}</span>
             </div>
             <div className="text-center">
-               <Link className="btn-product" to="checkout">Proceed to Checkout<i class="fa fa-shopping-bag" aria-hidden="true"></i></Link>
+               <Link className="btn-product" to="/checkout">Proceed to Checkout<i class="fa fa-shopping-bag" aria-hidden="true"></i></Link>
             </div> 
             
         </div>

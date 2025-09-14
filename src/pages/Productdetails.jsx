@@ -1,12 +1,11 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import productData from "../Data/productData";
 
 function Productdetails(){
     const showProduct = useParams();
     const product = productData.find((item) => item.id === Number(showProduct.id));
-    const navigate = useNavigate();
     const cartButton =() => {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       const exestingItem = cart.find((cartItem) => cartItem.id === product.id);
@@ -17,7 +16,11 @@ function Productdetails(){
         cart.push({...product,quantity:1});
       }
       localStorage.setItem("cart", JSON.stringify(cart));
-      navigate("/cart");
+      // updateCounts();
+      window.dispatchEvent(new Event("cartUpdated"));
+      // navigate("/cart");
+      // window.location.reload();
+      
     }
     return(
       <>
@@ -26,13 +29,13 @@ function Productdetails(){
             <div className="row justify-content-center">
                <div className="col-md-8">
                 <div className="inner-heading">
-                    <h4>Our Products</h4>
+                    <h4>Product Overview</h4>
                     <p>Adventure Starts with the Right Gear</p>
                 </div>
                     <nav aria-label="breadcrumb">
                        <ol class="breadcrumb">
-                          {/* <li class="breadcrumb-item"><Link to="/">Home</Link></li> */}
-                              <li class="breadcrumb-item active" aria-current="page">Library</li>
+                          <li class="breadcrumb-item"><Link to="/">Home</Link></li>
+                              <li class="breadcrumb-item active" aria-current="page">{product.name}</li>
                         </ol>
                               </nav>
                </div>
@@ -68,8 +71,8 @@ function Productdetails(){
                 </ul>
               </div>
               <div className='p-button justify-content-start'>
-              <Link className="btn-product" onClick={cartButton} to="/cart">Add to cart <i class="fa fa-shopping-bag" aria-hidden="true"></i></Link>
-              <Link className="btn-product-line" to="/cart">Add to wishlist <i class="fal fa-heart"></i></Link>
+              <Link className="btn-product" to="/cart" onClick={cartButton}>Add to cart <i class="fa fa-shopping-bag" aria-hidden="true"></i></Link>
+              <Link className="btn-product-line">Add to wishlist <i class="fal fa-heart"></i></Link>
               </div>
 
               <div className="extra-info">

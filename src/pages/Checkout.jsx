@@ -9,7 +9,7 @@ function Checkout(){
                     <div className="row justify-content-center">
                        <div className="col-md-8">
                         <div className="inner-heading">
-                            <h4>Our Products</h4>
+                            <h4>Complete Your Order</h4>
                             <p>Adventure Starts with the Right Gear</p>
                         </div>
                             <nav aria-label="breadcrumb">

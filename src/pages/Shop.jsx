@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import productData from '../Data/productData';
+import { useState } from "react";
 
 function Shop(){
+    const [category, setCategory] = useState("all");
+    const fillter = category === "all" ? productData : productData.filter (product => product.category === category);
     return(
     <>
     <section className="inner-banner">
@@ -16,7 +19,7 @@ function Shop(){
                     <nav aria-label="breadcrumb">
                        <ol class="breadcrumb">
                           <li class="breadcrumb-item"><Link to="/">Home</Link></li>
-                              <li class="breadcrumb-item active" aria-current="page">Library</li>
+                              <li class="breadcrumb-item active" aria-current="page">Shop</li>
                         </ol>
                               </nav>
                </div>
@@ -35,23 +38,26 @@ function Shop(){
                         <h3>Choose your categore</h3>
 
                         <ul>
-                            <li className="filter-item">
-                                <Link to='/' className="filter-link">Backpacks</Link> <img src="./images/filter/fil-1.png" alt="filter-model"/>
+                             <li className="filter-item">
+                                <Link className="filter-link" onClick={() => setCategory("all")}>View All Products</Link> <img src="./images/filter/fil-0.png" alt="filter-model"/>
                             </li>
                             <li className="filter-item">
-                                 <Link to='/' className="filter-link">Baselayers</Link> <img src="./images/filter/fil-2.png" alt="filter-model"/>
+                                <Link className="filter-link" onClick={() => setCategory("Jacket")}>Jacket</Link> <img src="./images/filter/fil-1.png" alt="filter-model"/>
                             </li>
                             <li className="filter-item">
-                                 <Link to='/' className="filter-link">Camping Tents</Link> <img src="./images/filter/fil-3.png" alt="filter-model"/>
+                                 <Link  className="filter-link" onClick={() => setCategory("Shoes")}>Hiking Shoes</Link> <img src="./images/filter/fil-2.png" alt="filter-model"/>
                             </li>
                             <li className="filter-item">
-                                 <Link to='/' className="filter-link">Camp Kitchen</Link> <img src="./images/filter/fil-4.png" alt="filter-model"/>
+                                 <Link  className="filter-link" onClick={() => setCategory("Tent")}>Camping Tents</Link> <img src="./images/filter/fil-3.png" alt="filter-model"/>
                             </li>
                             <li className="filter-item">
-                                 <Link to='/' className="filter-link">Climbing</Link> <img src="./images/filter/fil-5.png" alt="filter-model"/>
+                                 <Link  className="filter-link" onClick={() => setCategory("Backpack")}>Backpack</Link> <img src="./images/filter/fil-4.png" alt="filter-model"/>
                             </li>
                             <li className="filter-item">
-                                 <Link to='/' className="filter-link">Sleeping Mats</Link> <img src="./images/filter/fil-6.png" alt="filter-model"/>
+                                 <Link className="filter-link" onClick={() => setCategory("Accessories")}>Camp Kitchen</Link> <img src="./images/filter/fil-5.png" alt="filter-model"/>
+                            </li>
+                            <li className="filter-item">
+                                 <Link  className="filter-link" onClick={() => setCategory("SleepingBag")}>Sleeping Bags</Link> <img src="./images/filter/fil-6.png" alt="filter-model"/>
                             </li>
                         </ul>
                      </div>
@@ -62,7 +68,7 @@ function Shop(){
                 <div className="col-md-9">
                     <div className="row">
 
-                 {productData.map((item) =>(
+                 {fillter.map((item) =>(
                <div className="col-md-4">
         <div className="product-item">
           <div className="product-img text-center">

@@ -669,10 +669,10 @@ span.product-rating {
 .inner-heading{
   text-align: center;
 }
-.inner-heading h4{
-  color: #ffffff;
-  font-size: 65px;
-  font-weight: 700;
+.inner-heading h4 {
+    color: #ffffff;
+    font-size: 52px;
+    font-weight: 500;
 }
 .inner-heading p{
   color: #ffffff;
@@ -978,3 +978,24 @@ h5.check-card-title {
   padding: 60px 0px;
 }
 
+/* blog page */
+.blog-sec{
+  padding: 60px 0px;
+}
+.blog-item {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.blog-img img{
+    border-radius: 6px;
+    width: 100%;
+}
+.blog-date p {
+    font-size: 15px;
+}
+.blog-heading h5 {
+    line-height: 1.5;
+}
