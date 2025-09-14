@@ -50,7 +50,7 @@ function Nav(){
       <li className="nav-item">
         <Link className="nav-link" to="Faqpage">FAQ</Link>
       </li>
-      <li className="nav-item">
+      <li className="nav-item"> 
         <Link className="nav-link" to="contactus">Contact</Link>
       </li>
     </ul>
