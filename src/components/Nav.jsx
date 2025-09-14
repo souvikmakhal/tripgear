@@ -33,9 +33,7 @@ function Nav(){
         <div className="container">
        <nav className="navbar navbar-expand-lg navbar-light">
   <Link className="navbar-brand" to="/"><img src='./images/logo.png' alt="logo"/></Link>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
+ 
   <div className="collapse navbar-collapse" id="navbarNav">
     <ul className="navbar-nav m-auto">
       <li className="nav-item">
@@ -55,8 +53,8 @@ function Nav(){
       </li>
     </ul>
   </div>
-  <div className="">
-    <ul className="navbar-nav">
+  <div className="nav-icon">
+    <ul className="navbar-nav icon-nav">
        <li className="nav-item">
         <Link className="nav-link" to="/"><i class="fa fa-user"></i></Link> 
       </li>
@@ -67,6 +65,9 @@ function Nav(){
         <Link className="nav-link" to="cart"><i class="fal fa-shopping-bag"></i><span>{cartCount}</span></Link>
       </li>
     </ul>
+     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
   </div>
 </nav>
 </div>

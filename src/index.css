@@ -78,11 +78,10 @@ a.nav-link span {
   position: relative;
   background: url(../public/images/hero-banner.jpg) no-repeat center;
   background-size: cover;
-  padding: 130px 0px;
   border-radius: 20px;
 }
 .hero-content {
-    padding-left: 20px;
+    padding: 130px 0px 130px 20px;
 }
 .hero-content h3 {
     font-size: 28px;
@@ -998,4 +997,94 @@ h5.check-card-title {
 }
 .blog-heading h5 {
     line-height: 1.5;
+}
+
+
+/* responsive */
+@media screen and (max-width: 668px) {
+  ul.navbar-nav.icon-nav {
+    display: flex;
+    flex-direction: row;
+}
+ .nav-icon {
+    display: flex;
+    gap: 17px;
+}
+.navbar-toggler{
+  border: none;
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+.hero-banner{
+  border-radius: 8px;
+}
+.hero-content h2{
+  font-size: 44px;
+  line-height: 54px;
+  font-weight: 600;
+}
+.counter::before{
+  display: none;
+}
+.counter::after{
+  display: none;
+}
+.counter{
+  position: relative;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 8px 8px 0px 0px; 
+}
+.counter-content{
+  border-radius: 15px;
+    padding: 15px 15px;
+    gap: 15px;
+}
+.section-heading{
+  text-align: center;
+}
+.item-category-img{
+  margin: auto;
+}
+.brand-item{
+  overflow: hidden;
+}
+.discount-content h4{
+  font-size: 25px;
+}
+.discount-content h4 span{
+  font-size: 25px;
+}
+.discount-content p{
+  font-size: 18px;
+}
+.footer-bootm{
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+}
+.counter-item h4{
+  font-size: 30px;
+}
+.counter-item p{
+  font-size: 14px;
+}
+.inner-back{
+  border-radius: 8px;
+  padding: 20px;
+}
+.inner-heading h4{
+  font-size: 40px;
+}
+.p-button{
+  flex-direction: column;
+}
+.cart-item{
+  overflow-x: auto;
+  gap: 20px;
+}
+.hero-content{
+  padding: 50px 0px 0px 15px;
+}
 }
