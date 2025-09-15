@@ -205,6 +205,7 @@ a.nav-link span {
   background-color: #E7E7E7;
   border-radius: 75px;
   transform: scale(1);
+  overflow: hidden;
 }
 .item-category-img img{
   width: 100%;
@@ -796,6 +797,8 @@ button#description-tab {
 }
 button#info-tab{
   color: #000000;
+  font-size: 18px;
+  font-weight: 600;
 }
 .pro-feturs li{
   margin-top: 15px;
