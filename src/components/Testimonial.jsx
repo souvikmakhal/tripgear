@@ -25,7 +25,7 @@ function Testimonial(){
               <div className="client-addres">
                 <h5>— Sarah M.</h5>
                 <p>Colorado, USA</p>
-              </div>
+              </div> 
               </div>
               <div className="client-comment"> 
                 <h5>The best hiking boots I’ve ever owned!</h5>
@@ -59,7 +59,7 @@ function Testimonial(){
               </div>
               <div className="client-comment">
                 <h5>Fast shipping and excellent support.</h5>
-                <p>My tent arrived earlier than expected, and the customer support team helped me choose the right one for my camping trip. Setup was quick and easy — highly recommended!</p>
+                <p>My tent arrived earlier than expected, and the customer support team helped me choose the right one for my camping trip. Setup was quick and easy</p>
               </div>
           </div>
         </div>
@@ -110,7 +110,7 @@ function Testimonial(){
               </div>
               <div className="client-comment">
                 <h5>Fast shipping and excellent support.</h5>
-                <p>My tent arrived earlier than expected, and the customer support team helped me choose the right one for my camping trip. Setup was quick and easy — highly recommended!</p>
+                <p>My tent arrived earlier than expected, and the customer support team helped me choose the right one for my camping trip. Setup was quick and easy.</p>
               </div>
           </div>
         </div>
@@ -161,7 +161,7 @@ function Testimonial(){
               </div>
               <div className="client-comment">
                 <h5>Fast shipping and excellent support.</h5>
-                <p>My tent arrived earlier than expected, and the customer support team helped me choose the right one for my camping trip. Setup was quick and easy — highly recommended!</p>
+                <p>My tent arrived earlier than expected, and the customer support team helped me choose the right one for my camping trip. Setup was quick and easy.</p>
               </div>
           </div>
         </div>
