@@ -392,6 +392,7 @@ span.product-rating {
 .discount-banner img{
   width: 100%;
   border-radius: 20px;
+  margin-top: 25px;
 }
 .discount-content {
     position: absolute;
@@ -966,14 +967,18 @@ h5.check-card-title {
     margin: 0;
 }
 .check-product-item {
-    display: flex
-;
+    display: flex;
     padding: 10px 15px;
     justify-content: space-between;
     align-items: start;
+    justify-content: center;
+    gap: 20px;
 }
 .check-product-item img{
   width: 15%;
+}
+.check-product-dtl {
+    width: 253px;
 }
 /* wishlist */
 .wish-product{

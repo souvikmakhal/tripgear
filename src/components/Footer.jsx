@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Footer(){
     return(
         <>
@@ -13,8 +13,8 @@ function Footer(){
                         </div>
                         <p>Have questions about our products, your order, or need hiking gear advice? We’re here to help you every step of the way.</p>
                        <ul>
-                        <li><i class="fa fa-envelope"></i> <a href="/">+012 2345 6789</a></li>
-                        <li><i class="fa fa-phone"></i> <a href="/">support@tripgear.com</a></li>
+                        <li><i class="fa fa-envelope"></i> <Link to="/">+012 2345 6789</Link></li>
+                        <li><i class="fa fa-phone"></i> <Link to="/">support@tripgear.com</Link></li>
                         <li><i class="fa fa-clock"></i> Monday till Friday 10 to 6 EST</li>
                        </ul>
                     </div>
@@ -25,11 +25,11 @@ function Footer(){
                     <h5>Quick Links</h5>
                     </div>
                        <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/">Shop All Products</a></li>
-                        <li><a href="/">Blog / Hiking Guides</a></li>
-                        <li><a href="/">Contact Us</a></li>
-                        <li><a href="/">FAQs</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/shop">Shop All Products</Link></li>
+                        <li><Link to="/blog">Blog / Hiking Guides</Link></li>
+                        <li><Link to="/contactus">Contact Us</Link></li>
+                        <li><Link to="/faqpage">FAQ</Link></li>
                        </ul>
                     </div>
                   </div>
@@ -39,11 +39,11 @@ function Footer(){
                     <h5>Customer Support</h5>
                     </div>
                        <ul>
-                        <li><a href="/">Shipping & Returns</a></li>
-                        <li><a href="/">Order Tracking</a></li>
-                        <li><a href="/">Warranty & Repairs</a></li>
-                        <li><a href="/">Gift Cards</a></li>
-                        <li><a href="/">Care & Maintenance</a></li>
+                        <li><Link to="/">Shipping & Returns</Link></li>
+                        <li><Link to="/">Order Tracking</Link></li>
+                        <li><Link to="/">Warranty & Repairs</Link></li>
+                        <li><Link to="/">Gift Cards</Link></li>
+                        <li><Link to="/">Care & Maintenance</Link></li>
                        </ul>
                     </div>
                   </div>
@@ -60,10 +60,10 @@ function Footer(){
 
                       <div className="sosal-link">
                         <ul>
-                            <li><a href="/"><img src='./images/sol-icon-1.png' alt="sosal"/></a></li>
-                            <li><a href="/"><img src='./images/sol-icon-2.png' alt="sosal"/></a></li>
-                            <li><a href="/"><img src='./images/sol-icon-3.png' alt="sosal"/></a></li>
-                            <li><a href="/"><img src='./images/sol-icon-4.png' alt="sosal"/></a></li>
+                            <li><Link to="/"><img src='./images/sol-icon-1.png' alt="sosal"/></Link></li>
+                            <li><Link to="/"><img src='./images/sol-icon-2.png' alt="sosal"/></Link></li>
+                            <li><Link to="/"><img src='./images/sol-icon-3.png' alt="sosal"/></Link></li>
+                            <li><Link to="/"><img src='./images/sol-icon-4.png' alt="sosal"/></Link></li>
                         </ul>
                       </div>
                     </div>
@@ -80,9 +80,9 @@ function Footer(){
                     </ul>
                     </div>
                     <div className="bottom-link">
-                        <a href="/">Terms and conditions</a>
-                        <a href="/">/</a>
-                         <a href="/">privacy policy</a>
+                        <Link to="/">Terms and conditions</Link>
+                        <Link to="/">/</Link>
+                         <Link to="/">privacy policy</Link>
                     </div>
                 </div>
             </div>

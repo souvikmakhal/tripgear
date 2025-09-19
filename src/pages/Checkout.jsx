@@ -1,7 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState, useEffect} from "react";
 
 function Checkout(){
+  const [cart , setCart] = useState([]);
+  const [total , setTotal] = useState([]);
+
+     useEffect(() => {
+      const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+      setCart(savedCart);
+    }, []);
+
+       useEffect(() => {
+        const totalPrice = cart.reduce((sum, product) => sum + product.price * product.quantity, 0);
+        console.log(totalPrice);
+        setTotal(totalPrice);
+      }, [cart]);
+
     return(
         <>
          <section className="inner-banner">
@@ -159,20 +174,22 @@ function Checkout(){
                         <div class="card checkout-order-summery">
                           <div className="checkout-card-body">
                             <h5 className="check-card-title text-center mb-4">Order Summary</h5>
+                            {cart.map((product,i) =>(
                             <div className="check-product-item">
-                                <img src="./images/pp1.png" alt="prod"></img>
+                                <img src={product.image} alt="prod"></img>
                               <div className="check-product-dtl">
-                                <h5>Waterproof Jacket</h5>
+                                <h5>{product.name}</h5>
                                 <p>QTI: 1</p>
                               </div>
                               <div className="check-product-price">
-                                <p>$123.99</p>
+                                <p>${product.price}</p>
                               </div>
                             </div>
+                            ))}
                               <div className="check-detils">
                             <div className="d-flex justify-content-between mb-4">
                               <span>Item Price</span>
-                              <span>$290.00</span>
+                              <span>${total}</span>
                             </div>
                             <div className="d-flex justify-content-between mb-4">
                               <span>Shipping Price</span>
@@ -181,7 +198,7 @@ function Checkout(){
                             <hr/>
                             <div className="d-flex justify-content-between fw-bold mb-3">
                               <span>Total Price</span>
-                              <span>$290.00</span>
+                              <span>${total}</span>
                             </div>
                           </div>
                             

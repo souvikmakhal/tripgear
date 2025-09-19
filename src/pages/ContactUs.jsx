@@ -45,7 +45,7 @@ function ContactUs(){
             <label for="message" className="form-label">Message</label>
             <textarea className="form-control" id="message" rows="5" placeholder="Your message..." required></textarea>
           </div>
-          <Link className="btn-product" to="/checkout">Send Messages<i class="fa fa-paper-plane" aria-hidden="true"></i></Link>
+          <Link className="btn-product" >Send Messages<i class="fa fa-paper-plane" aria-hidden="true"></i></Link>
         </form>
       </div>
     </div>
