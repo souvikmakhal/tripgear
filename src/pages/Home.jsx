@@ -29,7 +29,7 @@ function Home(){
                         <h3>Welcome to Tripgear</h3>
                         <h2>Gear Up for Your Next Adventure</h2>
                         <p>Discover premium hiking essentials built for durability, comfort, and performance.</p>
-                        <a className='btn-index' href='/shop'>Shop Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        <Link className='btn-index' to="Shop">Shop Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></Link>
                     </div>
                 </div>
             </div>
