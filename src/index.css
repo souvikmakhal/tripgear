@@ -1002,6 +1002,25 @@ h5.check-card-title {
     line-height: 1.5;
 }
 
+/* thankyou */
+
+.thank-sec{
+  position: relative;
+  padding: 100px;
+  background: url(../public/images/thankyou-banner.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+.thanks-content {
+    margin-top: 30px;
+}
+.thanks-content h1{
+  font-size: 35px;
+}
+.thanks-content h1 {
+    font-size: 70px;
+    line-height: 80px;
+}
 
 /* responsive */
 @media screen and (max-width: 668px) {
@@ -1091,3 +1110,4 @@ h5.check-card-title {
   padding: 50px 0px 0px 15px;
 }
 }
+

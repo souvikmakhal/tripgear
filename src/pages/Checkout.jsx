@@ -150,7 +150,7 @@ function Checkout(){
           <label className="form-check-label" htmlFor="terms">I agree with the terms and conditions *</label>
         </div>
 
-        <button type="submit" className="btn-product w-25">Place Order</button>
+        <Link type="submit" className="btn-product w-25" to="/thankyou">Place Order</Link>
       </form>
                   </div>
                 </div>

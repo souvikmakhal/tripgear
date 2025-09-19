@@ -29,13 +29,13 @@ function Home(){
                         <h3>Welcome to Tripgear</h3>
                         <h2>Gear Up for Your Next Adventure</h2>
                         <p>Discover premium hiking essentials built for durability, comfort, and performance.</p>
-                        <a className='btn-index' href='shop'>Shop Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        <a className='btn-index' href='/shop'>Shop Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
             <div className='counter'>
                 <div className='counter-content'>
-                     <div className='counter-item'>
+                     <div className='counter-item'> 
                             <h4><span>16</span>K+</h4>
                             <p>Satisfied Customers</p>
                         </div>
