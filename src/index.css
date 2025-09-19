@@ -388,11 +388,11 @@ span.product-rating {
 .discount-banner{
   overflow: hidden;
   position: relative;
+  margin-top: 25px;
 }
 .discount-banner img{
   width: 100%;
   border-radius: 20px;
-  margin-top: 25px;
 }
 .discount-content {
     position: absolute;
