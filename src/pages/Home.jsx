@@ -143,7 +143,7 @@ function Home(){
           </div>
           <div className='popup-icon'>
             <Link className="item-icon" onClick={() => wishbutton(item)} >{wishlist.find(p => p.id === item.id) ? <i class="fal fa-heart"></i> : <i class="fal fa-heart" style={{fontWeight: "800", color: "#00BFB2"}}></i>}</Link>
-            <Link className="item-icon" to="/"><i class="fal fa-eye"></i></Link>
+            <Link className="item-icon" to={`/Productdetails/${item.id}`}><i class="fal fa-eye"></i></Link>
           </div>
         </div>
               </div>
@@ -209,7 +209,7 @@ function Home(){
           </div>
           <div className='popup-icon'>
             <Link className="item-icon"  onClick={() => wishbutton(item)}><i class="fal fa-heart"></i></Link>
-            <Link className="item-icon" to="/"><i class="fal fa-eye"></i></Link>
+            <Link className="item-icon" to={`/Productdetails/${item.id}`}><i class="fal fa-eye"></i></Link>
           </div>
         </div>
               </div>

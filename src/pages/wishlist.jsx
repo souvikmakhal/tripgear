@@ -23,11 +23,11 @@ function Wishlist(){
                 </div>
                     <nav aria-label="breadcrumb">
                        <ol class="breadcrumb">
-                          {/* <li class="breadcrumb-item"><Link to="/">Home</Link></li> */}
-                              <li class="breadcrumb-item active" aria-current="page">Library</li>
+                          <li class="breadcrumb-item"><Link to="/">Home</Link></li>
+                              <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
                         </ol>
                               </nav>
-               </div>
+               </div>   
             </div>
         </div>
     </section>
@@ -60,7 +60,7 @@ function Wishlist(){
                         <Link className="item-icon" to="/"><i class="fal fa-eye"></i></Link>
                       </div>
                     </div>
-                          </div>
+                          </div>  
         ))}
                 </div>
             </div>

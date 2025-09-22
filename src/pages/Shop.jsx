@@ -4,6 +4,20 @@ import productData from '../Data/productData';
 import { useState } from "react";
 
 function Shop(){
+     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    
+    function wishbutton (product)  {
+          const exestingItem = wishlist.find((Item) => Item.id === product.id);
+          if (exestingItem){
+                   exestingItem.quantity +=1;
+          }
+          else {
+            wishlist.push({...product,quantity:1});
+          }
+          localStorage.setItem("wishlist", JSON.stringify(wishlist));
+          window.dispatchEvent(new Event("wishUpdated"));
+        } 
+
     const [category, setCategory] = useState("all");
     const fillter = category === "all" ? productData : productData.filter (product => product.category === category);
     return(
@@ -89,8 +103,8 @@ function Shop(){
           <div className='p-button text-center'>
           <Link className="btn-product" to={`/Productdetails/${item.id}`}>Order Now <i class="fa fa-shopping-bag" aria-hidden="true"></i></Link>
            <div className='popup-icon'>
-                      <Link className="item-icon" to="/"><i class="fal fa-heart"></i></Link>
-                      <Link className="item-icon" to="/"><i class="fal fa-eye"></i></Link>
+                      <Link className="item-icon" onClick={() => wishbutton(item)}><i class="fal fa-heart"></i></Link>
+                      <Link className="item-icon" to={`/Productdetails/${item.id}`}><i class="fal fa-eye"></i></Link>
                     </div>
           </div>
         </div>
