@@ -59,10 +59,10 @@ function Nav(){
         <Link className="nav-link" to="/"><i class="fa fa-user"></i></Link> 
       </li>
        <li className="nav-item">
-        <Link className="nav-link" to="wishlist"><i class="fal fa-heart"></i><span>{wishCount}</span></Link>
+        <Link className="nav-link" to="/wishlist"><i class="fal fa-heart"></i><span>{wishCount}</span></Link>
       </li>
          <li className="nav-item">
-        <Link className="nav-link" to="cart"><i class="fal fa-shopping-bag"></i><span>{cartCount}</span></Link>
+        <Link className="nav-link" to="/cart"><i class="fal fa-shopping-bag"></i><span>{cartCount}</span></Link>
       </li>
     </ul>
      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
